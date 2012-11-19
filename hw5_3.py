@@ -1,7 +1,7 @@
 import numpy as np
 from scipy import sqrt
 import matplotlib.pylab as plt
-start = 0.0001
+start = 0.1
 stop = 45
 resolution = 10000
 bl = list(np.arange(start, stop, (stop - start) / resolution))
@@ -34,12 +34,12 @@ ax2.set_ylabel(r'$ln(\beta)$')
 zeros = [0 for b in bl]
 ax1.fill_betweenx(bl, zeros, al, alpha=0.2, facecolor='black')
 ax2.fill_betweenx(logbl, zeros, al, alpha=0.2, facecolor='black')
-ax2.set_ylim((-10, 3))
+ax2.set_ylim((min(logbl), 3))
 ax1.set_xlim((0, max(al)))
 ax2.set_xlim((0, max(al)))
 #ax1.set_yscale('log')
 #plt.xscale('log')
-fig.suptitle('HW5 Part 3')
+fig.suptitle('CBE 504 HW5 Part 3 \n Tom Bertalan \n' + r'$\gamma = %.3f$' % g)
 #plt.tight_layout(pad=1.2, h_pad=None, w_pad=None)
 fig.savefig('hw5_3.pdf')
-plt.show()
+#plt.show()

@@ -45,7 +45,7 @@ ax.set_ylabel(r'$dy/d\tau$ or $dx/d\tau$')
 ax.set_ylim((-1.5, 1.5))
 ax.set_xscale('log')
 ax.legend(loc='upper left')
-fig.suptitle('HW 5, Part 2: Multiple CSTR Steady States \n'\
+fig.suptitle('CBE 504 HW 5, Part 2: Multiple CSTR Steady States \n Tom Bertalan \n'\
           + r'$\alpha=%.3f$, $\beta=%.0f$, $\gamma=%.0f$' % (a, b, g))
 fig.savefig('hw5_2.pdf')
 #plt.show()

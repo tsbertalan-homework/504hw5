@@ -19,11 +19,14 @@ Dal1 = [Daf(u) for u in ul1]
 sl2 = [sf(u) for u in ul2]
 Dal2 = [Daf(u) for u in ul2]
 
-plt.plot(sl, Dal, 'k')
-plt.xlabel(r'$\sigma$')
-plt.ylabel(r'$Da$')
-#plt.yscale('log')
-#plt.xscale('log')
+fig = plt.figure(1, figsize=(11, 8.5))
+ax = fig.add_subplot(1, 1, 1)
+
+ax.plot(sl, Dal, 'k')
+ax.set_xlabel(r'$\sigma$')
+ax.set_ylabel(r'$Da$')
+#ax.yscale('log')
+#ax.xscale('log')
 print 'minimum s is', min(sl)
 print 'minimum Da is', min(Dal)
 def uf(s):
@@ -48,13 +51,10 @@ yvertices.append(Dal[yindex])
 xvertices.append(min(sl))  # bottom
 yvertices.append(min(Dal))
 
-plt.fill(xvertices, yvertices, alpha=0.2, facecolor='black')
+ax.fill(xvertices, yvertices, alpha=0.2, facecolor='black')
 
-plt.xlim((5, sl[xindex]))
-plt.ylim((20, Dal[yindex]))
-
-plt.suptitle('HW5, Part 1')
-plt.savefig('hw5_1.pdf')
+ax.set_xlim((5, sl[xindex]))
+ax.set_ylim((20, Dal[yindex]))
 
 def eigenvalue(Da, s, u):
     return 2 * Da * s * u / (s * u + 1) ** 3 - Da / (s * u + 1) ** 2 - 1
@@ -62,9 +62,12 @@ def eigenvalue(Da, s, u):
 l = eigenvalue(60, 15, max(uf(15)))
 print 'eigenvalue is', l
 
-plt.scatter([15], [60], color='black')
+ax.scatter([15], [60], color='black')
 annotation = r'$u = %.3f$' % max(uf(15)) + '\n'\
      + r'$\lambda = %.3f$' % l
-plt.annotate(annotation, xy=(15, 60), xytext=(14.5, 63.5))
+ax.annotate(annotation, xy=(15, 60), xytext=(14.5, 63.5))
 
-#plt.show()
+fig.suptitle('CBE 504 HW5, Part 1 \n Tom Bertalan')
+fig.savefig('hw5_1.pdf')
+
+#ax.show()
