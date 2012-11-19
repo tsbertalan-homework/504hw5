@@ -22,7 +22,7 @@ for b in trial_values:
         ddyl = [ddyf(y,a,b,g) for y in yl]
         dyl = [dyf(y, a, b, g) for y in yl]
         j0condl = [J0condf(x, a, b, g) for x in yl]
-        plt.plot(yl, dyl, label=label)
+        plt.plot(yl, j0condl, label=label)
         if dyl[0] > maxinit:
             maxinit = dyl[0]
             maxparams = (a, b, g)
