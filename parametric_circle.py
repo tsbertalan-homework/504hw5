@@ -22,7 +22,7 @@ ax1.set_xlim((tmin, tmax))
 ax2.set_xlabel(r'$x$')
 ax2.set_ylabel(r'$y$')
 ax1.set_title('Dafuq is this?')
-ax2.set_title('It\'s a circle, fuckass.')
+ax2.set_title('It\'s a circle, dumpass.')
 
 fig.suptitle('Parametric Plots are good, M\'kay?')
 ax1.legend()
