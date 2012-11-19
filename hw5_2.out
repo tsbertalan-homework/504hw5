@@ -1,0 +1,11 @@
+roots are [0.24470999999999984, 4.431319999999995, 47.175659999999951]
+roots / e are [0.090023778049063599, 1.630191525251834, 17.354955437693949]
+At (0.015, 0.245)
+eigenvalues are (-0.76478067363096058, -1.0)
+this steady-state is: stable
+At (0.277, 4.431)
+eigenvalues are (2.4296731129664311, -0.99999999999999978)
+this steady-state is: saddle
+At (2.948, 47.176)
+eigenvalues are (-1.0, -5400.121010337707)
+this steady-state is: stable
